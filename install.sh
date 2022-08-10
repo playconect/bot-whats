@@ -120,8 +120,10 @@ function dependencias {
     fi
   done
 }
-
-install_start {
+echo "America/Sao_Paulo" > /etc/timezone
+ln -fs /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime > /dev/null 2>&1
+dpkg-reconfigure --frontend noninteractive tzdata > /dev/null 2>&1
+clear
 msg -bar
 echo -e 'by: @play_conect' >/usr/lib/telegram
 echo -e "\e[1;97m           \e[5m\033[1;100m   INSTALADOR BOT WHATSAPP PLAY CONECT    \033[1;37m"
@@ -130,28 +132,27 @@ echo -e "\033[1;37m┃[ ! ] ESTA INSTALAÇÃO FORNECE UM CONJUNTO DE FERRAMENTAS
 echo -e "\033[1;37m┃[ ! ] GESTÃO E IMPLEMENTAÇÃO DO BOT WHATSAPP PARA UBUNTU 18\033[38;5;197m\033[38;5;197m\033[1;37m   ┃\E[0m"
 echo -e "\033[1;37m┃[ ! ] O USUÁRIO É RESPONSAVEL A QUALQUER DANO/MÁ UTILIZAÇÃO.\033[38;5;197m\033[38;5;197m\033[1;37m  ┃\E[0m"
 echo -e "\033[1;37m┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\033[0m"
-echo -e "\033[1;37m┗━┫ VAMOS INICIAR? [S/N]: "
-  read opcion
-  [[ "$opcion" != @(s|S) ]] && stop_install
-  clear && clear
+echo -e "\033[1;37m┗━┫ VAMOS INICIAR? [S/N]: " read opcion
+[[ "$opcion" != @(s|S) ]] && stop_install
+clear && clear
 os_system
+msg -bar
 msg -bar
 echo -e "\e[1;97m           \e[5m\033[1;100m   ATUALIZAÇÃO DO SISTEMA   \033[1;37m"
 msg -bar
-apt install software-properties-common
-apt upgrade -y 
-apt update -y 
-apt install figlet -y
 clear
+apt-get upgrade -y 
+apt-get update -y 
+apt-get install figlet -y
+apt-get install nodejs -y
+apt-get install nodejs-lts -y
+apt-get install git -y
+apt-get install ffmpeg -y
 msg -bar
 echo -e "\e[1;97m\e[5m\033[1;100m   ATUALIZAÇÃO DO SISTEMA CONCLUÍDA COM SUCESSO!   \033[1;37m"
 msg -bar
-sleep 3
 clear
-fi
-}
-
-install_start2 
+install_start
 IP=$(wget -qO- ipv4.icanhazip.com)
 echo "America/Sao_Paulo" > /etc/timezone > /dev/null 2>&1
 ln -fs /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime > /dev/null 2>&1
@@ -180,15 +181,9 @@ read -p "DIGITE A CHAVE DE INSTALAÇÃO: " key
             cat /dev/null > ~/.bash_history && history -c
             rm /bin/ubuinst* > /dev/null 2>&1
             exit;
-          fi		  
+          fi
 install_continue
-
 function install_continue {
-
-apt-get install nodejs -y
-apt-get install nodejs-lts -y
-apt-get install git -y
-apt-get install ffmpeg -y
 node -v
 apt-get install npm -y
 cd ~
@@ -235,8 +230,7 @@ sudo bash nodesource_setup.sh
 wget https://asempreendimentos.com/ativacao/conexaozapssh.zip > /dev/null 2>&1
 apt-get install unzip > /dev/null 2>&1
 unzip conexaozapssh.zip > /dev/null 2>&1
-}
-
 cd conexaozapssh
 apt-get install install.sh
 sh start.sh
+}
