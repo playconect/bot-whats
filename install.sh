@@ -165,6 +165,7 @@ nvm alias default 16.13.1
 nvm use default
 npm install express -y
 npm install -g express -y
+~/.nvm/versions/node/16.13.1/lib/node_modules/express
 npm link express
 nvm help
 apt-get install ruby -y
