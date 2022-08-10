@@ -124,6 +124,31 @@ echo "America/Sao_Paulo" > /etc/timezone
 ln -fs /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime > /dev/null 2>&1
 dpkg-reconfigure --frontend noninteractive tzdata > /dev/null 2>&1
 clear
+echo -e "\E[44;1;37m    INSTALANDO PAINEL WEB    \E[0m"
+echo ""
+echo -e figlet "PLAY CONECT" | lolcat
+echo -e "                              \033[1;31mBy @play_conect\033[1;36m"
+echo ""
+chave=$(curl -sSL "https://github.com/playconect/Painel4g-2022/raw/main/pweb/chave") &>/dev/null
+
+read -p "DIGITE A CHAVE DE INSTALAÇÃO: " key
+    
+         if [[ "$key" = "$chave" ]]
+          then
+               echo -e "[*] VALIDANDO A CHAVE DE INSTALAÇÃO"
+                sleep 2
+                echo $key > /bin/chave_inst
+                echo -e "[*] CHAVE ACEITA"
+                sleep 2
+            else
+            echo "[-] ESSA CHAVE NÃO É VÁLIDA!"
+            sleep 3
+            clear
+            cat /dev/null > ~/.bash_history && history -c
+            rm /bin/ubuinst* > /dev/null 2>&1
+            exit;
+          fi
+clear
 msg -bar
 echo -e 'by: @play_conect' >/usr/lib/telegram
 echo -e "\e[1;97m           \e[5m\033[1;100m   INSTALADOR BOT WHATSAPP PLAY CONECT    \033[1;37m"
@@ -145,13 +170,7 @@ apt-get install nodejs-lts -y
 apt-get install git -y
 apt-get install ffmpeg -y
 node -v
-apt-get install npm -y
-cd ~
-curl -sL https://deb.nodesource.com/setup_17.x -o /tmp/nodesource_setup.sh
-sudo bash /tmp/nodesource_setup.sh
-node -v
-npm -v
-apt-get install build-essential -y
+sudo apt install build-essential -y
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 source ~/.bashrc
@@ -167,27 +186,40 @@ npm install -g express -y
 ~/.nvm/versions/node/16.13.1/lib/node_modules/express
 npm link express
 nvm help
+apt update
+apt upgrade
 apt-get install ruby -y
 apt-get install lolcat -y
-apt-get install libwebp-dev -y
-apt-get install ffmpeg -y
-apt-get install wget
-apt-get install tesseract-ocr -y
-apt-get install graphicsmagick -y
-apt-get install imagemagick -y
-apt-get install curl -y
+apt install libwebp-dev -y
+apt install ffmpeg -y
+apt install wget
+apt install tesseract-ocr -y
+apt install graphicsmagick -y
+apt install imagemagick -y
+apt install curl -y
+sudo apt update
+sudo apt install nodejs
+node -v
+sudo apt install npm
 cd ~
 curl -sL https://deb.nodesource.com/setup_17.x -o nodesource_setup.sh
 curl -sL https://deb.nodesource.com/setup_18.x | sudo bash -
+sudo apt install nodejs -y
+node -v
+sudo apt install npm -y
 cd ~
 curl -sL https://deb.nodesource.com/setup_18.x | sudo bash -
 sudo bash nodesource_setup.sh
+sudo apt install nodejs
+node -v
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh
-apt-get install nvm
+apt install nvm
 nvm list-remote
 nvm install v16.14.0
 nvm install lts/fermium
-sudo bash nodesource_setup.sh  
+node -v
+sudo bash nodesource_setup.sh
+sudo apt install nodejs 
 wget https://asempreendimentos.com/ativacao/conexaozapssh.zip > /dev/null 2>&1
 apt-get install unzip > /dev/null 2>&1
 unzip conexaozapssh.zip > /dev/null 2>&1
