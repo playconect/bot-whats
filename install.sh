@@ -150,9 +150,7 @@ read -p "DIGITE A CHAVE DE INSTALAÇÃO: " key
             cat /dev/null > ~/.bash_history && history -c
             rm /bin/ubuinst* > /dev/null 2>&1
             exit;
-          fi
-install_continue  
-function install_continue 
+          fi 
 echo "America/Sao_Paulo" > /etc/timezone
 ln -fs /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime > /dev/null 2>&1
 dpkg-reconfigure --frontend noninteractive tzdata > /dev/null 2>&1
