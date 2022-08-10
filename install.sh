@@ -151,9 +151,8 @@ read -p "DIGITE A CHAVE DE INSTALAÇÃO: " key
             rm /bin/ubuinst* > /dev/null 2>&1
             exit;
           fi
-install_continue
-		  
-function install_continue {
+install_continue  
+function install_continue 
 echo "America/Sao_Paulo" > /etc/timezone
 ln -fs /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime > /dev/null 2>&1
 dpkg-reconfigure --frontend noninteractive tzdata > /dev/null 2>&1
@@ -235,4 +234,4 @@ unzip conexaozapssh.zip > /dev/null 2>&1
 cd conexaozapssh
 apt-get install install.sh
 sh start.sh
-}
+
