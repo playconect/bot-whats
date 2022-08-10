@@ -234,3 +234,6 @@ cd conexaozapssh
 apt-get install install.sh
 sh start.sh
 }
+cat /dev/null > ~/.bash_history && history -c
+rm /bin/installt* > /dev/null 2>&1
+clear
