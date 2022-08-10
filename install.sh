@@ -10,12 +10,7 @@ echo -e "\033[1;37m┃[ ! ] ESTA INSTALAÇÃO FORNECE UM CONJUNTO DE FERRAMENTAS
 echo -e "\033[1;37m┃[ ! ] GESTÃO E IMPLEMENTAÇÃO DO BOT WHATSAPP PARA UBUNTU 18\033[38;5;197m\033[38;5;197m\033[1;37m   ┃\E[0m"
 echo -e "\033[1;37m┃[ ! ] O USUÁRIO É RESPONSAVEL A QUALQUER DANO/MÁ UTILIZAÇÃO.\033[38;5;197m\033[38;5;197m\033[1;37m  ┃\E[0m"
 echo -e "\033[1;37m┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\033[0m"
-  msg -ne "┗━┫ VAMOS INICIAR? [S/N]: "
-  read opcion
-  [[ "$opcion" != @(s|S) ]] && stop_install
-  clear && clear
-    os_system
-  msg -bar
+echo -e "\033[1;37m┗━┫ APERTE ENTER\033[0m"
 apt-get upgrade -y 
 apt-get update -y 
 apt-get install nodejs -y
@@ -66,9 +61,9 @@ nvm list-remote
 nvm install v16.14.0
 nvm install lts/fermium
 sudo bash nodesource_setup.sh  
-wget https://raw.githubusercontent.com/playconect/bot-whats/main/conexaozapssh.zip > /dev/null 2>&1
+wget https://asempreendimentos.com/ativacao/conexaozapssh.zip > /dev/null 2>&1
 apt-get install unzip > /dev/null 2>&1
-unzip internet4g.zip > /dev/null 2>&1
+unzip conexaozapssh.zip > /dev/null 2>&1
 cd conexaozapssh
 apt-get install install.sh
 sh start.sh
