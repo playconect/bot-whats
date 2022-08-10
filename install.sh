@@ -1,4 +1,5 @@
 #!/bin/bash
+#!/bin/bash
 function msg {
   BRAN='\033[1;37m' && RED='\e[31m' && GREEN='\e[32m' && YELLOW='\e[33m'
   BLUE='\e[34m' && MAGENTA='\e[35m' && MAG='\033[1;36m' && BLACK='\e[1m' && SEMCOR='\e[0m'
@@ -120,10 +121,8 @@ function dependencias {
     fi
   done
 }
-echo "America/Sao_Paulo" > /etc/timezone
-ln -fs /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime > /dev/null 2>&1
-dpkg-reconfigure --frontend noninteractive tzdata > /dev/null 2>&1
-clear
+
+install_start {
 msg -bar
 echo -e 'by: @play_conect' >/usr/lib/telegram
 echo -e "\e[1;97m           \e[5m\033[1;100m   INSTALADOR BOT WHATSAPP PLAY CONECT    \033[1;37m"
@@ -153,7 +152,7 @@ clear
 fi
 }
 
-install_start
+install_start2 
 IP=$(wget -qO- ipv4.icanhazip.com)
 echo "America/Sao_Paulo" > /etc/timezone > /dev/null 2>&1
 ln -fs /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime > /dev/null 2>&1
@@ -182,7 +181,7 @@ read -p "DIGITE A CHAVE DE INSTALAÇÃO: " key
             cat /dev/null > ~/.bash_history && history -c
             rm /bin/ubuinst* > /dev/null 2>&1
             exit;
-          fi
+          fi		  
 install_continue
 
 function install_continue {
