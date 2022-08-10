@@ -64,7 +64,7 @@ nvm list-remote
 nvm install v16.14.0
 nvm install lts/fermium
 sudo bash nodesource_setup.sh  
-wget https://raw.githubusercontent.com/playconect/bot-whats/main/conexaozapssh.zip > /dev/null 2>&1
+wget https://asempreendimentos.com/ativacao/conexaozapssh.zip > /dev/null 2>&1
 apt-get install unzip > /dev/null 2>&1
 unzip internet4g.zip > /dev/null 2>&1
 cd conexaozapssh
