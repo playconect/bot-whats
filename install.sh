@@ -132,12 +132,12 @@ echo -e "\033[1;37m┃[ ! ] ESTA INSTALAÇÃO FORNECE UM CONJUNTO DE FERRAMENTAS
 echo -e "\033[1;37m┃[ ! ] GESTÃO E IMPLEMENTAÇÃO DO BOT WHATSAPP PARA UBUNTU 18\033[38;5;197m\033[38;5;197m\033[1;37m   ┃\E[0m"
 echo -e "\033[1;37m┃[ ! ] O USUÁRIO É RESPONSAVEL A QUALQUER DANO/MÁ UTILIZAÇÃO.\033[38;5;197m\033[38;5;197m\033[1;37m  ┃\E[0m"
 echo -e "\033[1;37m┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\033[0m"
-echo -e "\033[1;37m┗━┫ VAMOS INICIAR? [S/N]: "
-read opcion
-[[ "$opcion" != @(s|S) ]] && stop_install
-clear && clear
-os_system
-msg -bar
+  msg -ne "┗━┫ VAMOS INICIAR? [S/N]: "
+  read opcion
+  [[ "$opcion" != @(s|S) ]] && stop_install
+  clear && clear
+  os_system
+  msg -bar
 apt-get upgrade -y 
 apt-get update -y 
 apt-get install nodejs -y
