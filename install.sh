@@ -125,7 +125,7 @@ ln -fs /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime > /dev/null 2>&1
 dpkg-reconfigure --frontend noninteractive tzdata > /dev/null 2>&1
 apt install figlet -y
 clear
-echo -e "\E[44;1;37m    INSTALANDO PAINEL WEB    \E[0m"
+echo -e "\E[44;1;37m    INSTALANDO BOT WHATSAPP    \E[0m"
 echo ""
 echo -e "PLAY CONECT" | figlet
 echo -e "                              \033[1;31mBy @play_conect\033[1;36m"
