@@ -151,10 +151,6 @@ read -p "DIGITE A CHAVE DE INSTALAÇÃO: " key
             rm /bin/ubuinst* > /dev/null 2>&1
             exit;
           fi 
-echo "America/Sao_Paulo" > /etc/timezone
-ln -fs /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime > /dev/null 2>&1
-dpkg-reconfigure --frontend noninteractive tzdata > /dev/null 2>&1
-clear
 msg -bar
 echo -e 'by: @play_conect' >/usr/lib/telegram
 echo -e "\e[1;97m           \e[5m\033[1;100m   INSTALADOR BOT WHATSAPP PLAY CONECT    \033[1;37m"
