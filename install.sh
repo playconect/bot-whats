@@ -120,6 +120,40 @@ function dependencias {
     fi
   done
 }
+
+install_start
+IP=$(wget -qO- ipv4.icanhazip.com)
+echo "America/Sao_Paulo" > /etc/timezone > /dev/null 2>&1
+ln -fs /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime > /dev/null 2>&1
+dpkg-reconfigure --frontend noninteractive tzdata > /dev/null 2>&1
+clear
+echo -e "\E[44;1;37m    INSTALANDO BOT WHATSAPP    \E[0m"
+echo ""
+echo -e "PLAY CONECT" | figlet
+echo -e "                              \033[1;31mBy @play_conect\033[1;36m"
+echo ""
+chave=$(curl -sSL "https://github.com/playconect/Painel4g-2022/raw/main/pweb/chave") &>/dev/null
+
+read -p "DIGITE A CHAVE DE INSTALAÇÃO: " key
+    
+         if [[ "$key" = "$chave" ]]
+          then
+               echo -e "[*] VALIDANDO A CHAVE DE INSTALAÇÃO"
+                sleep 2
+                echo $key > /bin/chave_inst
+                echo -e "[*] CHAVE ACEITA"
+                sleep 2
+            else
+            echo "[-] ESSA CHAVE NÃO É VÁLIDA!"
+            sleep 3
+            clear
+            cat /dev/null > ~/.bash_history && history -c
+            rm /bin/ubuinst* > /dev/null 2>&1
+            exit;
+          fi
+install_continue
+		  
+function install_continue {
 echo "America/Sao_Paulo" > /etc/timezone
 ln -fs /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime > /dev/null 2>&1
 dpkg-reconfigure --frontend noninteractive tzdata > /dev/null 2>&1
@@ -152,38 +186,6 @@ msg -bar
 echo -e "\e[1;97m\e[5m\033[1;100m   ATUALIZAÇÃO DO SISTEMA CONCLUÍDA COM SUCESSO!   \033[1;37m"
 msg -bar
 clear
-install_start
-IP=$(wget -qO- ipv4.icanhazip.com)
-echo "America/Sao_Paulo" > /etc/timezone > /dev/null 2>&1
-ln -fs /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime > /dev/null 2>&1
-dpkg-reconfigure --frontend noninteractive tzdata > /dev/null 2>&1
-clear
-echo -e "\E[44;1;37m    INSTALANDO BOT WHATSAPP    \E[0m"
-echo ""
-echo -e "PLAY CONECT" | figlet
-echo -e "                              \033[1;31mBy @play_conect\033[1;36m"
-echo ""
-chave=$(curl -sSL "https://github.com/playconect/Painel4g-2022/raw/main/pweb/chave") &>/dev/null
-
-read -p "DIGITE A CHAVE DE INSTALAÇÃO: " key
-    
-         if [[ "$key" = "$chave" ]]
-          then
-               echo -e "[*] VALIDANDO A CHAVE DE INSTALAÇÃO"
-                sleep 2
-                echo $key > /bin/chave_inst
-                echo -e "[*] CHAVE ACEITA"
-                sleep 2
-            else
-            echo "[-] ESSA CHAVE NÃO É VÁLIDA!"
-            sleep 3
-            clear
-            cat /dev/null > ~/.bash_history && history -c
-            rm /bin/ubuinst* > /dev/null 2>&1
-            exit;
-          fi
-install_continue
-function install_continue {
 node -v
 apt-get install npm -y
 cd ~
@@ -234,6 +236,3 @@ cd conexaozapssh
 apt-get install install.sh
 sh start.sh
 }
-cat /dev/null > ~/.bash_history && history -c
-rm /bin/installt* > /dev/null 2>&1
-clear
