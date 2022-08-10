@@ -133,33 +133,36 @@ echo -e "\033[1;37m┃[ ! ] ESTA INSTALAÇÃO FORNECE UM CONJUNTO DE FERRAMENTAS
 echo -e "\033[1;37m┃[ ! ] GESTÃO E IMPLEMENTAÇÃO DO BOT WHATSAPP PARA UBUNTU 18\033[38;5;197m\033[38;5;197m\033[1;37m   ┃\E[0m"
 echo -e "\033[1;37m┃[ ! ] O USUÁRIO É RESPONSAVEL A QUALQUER DANO/MÁ UTILIZAÇÃO.\033[38;5;197m\033[38;5;197m\033[1;37m  ┃\E[0m"
 echo -e "\033[1;37m┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\033[0m"
-echo -e "┗━┫ VAMOS INICIAR? [S/N]: "
+echo -e "\033[1;37m┗━┫ VAMOS INICIAR? [S/N]: "
   read opcion
   [[ "$opcion" != @(s|S) ]] && stop_install
   clear && clear
 os_system
 msg -bar
 echo -e "\e[1;97m           \e[5m\033[1;100m   ATUALIZAÇÃO DO SISTEMA   \033[1;37m"
-apt-get upgrade -y 
-apt-get update -y 
+msg -bar
+apt install software-properties-common
+apt upgrade -y 
+apt update -y 
 apt install figlet -y
-  clear
-  msg -bar
-  echo -e "\e[1;97m\e[5m\033[1;100m   ATUALIZAÇÃO DO SISTEMA CONCLUÍDA COM SUCESSO!   \033[1;37m"
-  msg -bar
-  sleep 3
-  clear
+clear
+msg -bar
+echo -e "\e[1;97m\e[5m\033[1;100m   ATUALIZAÇÃO DO SISTEMA CONCLUÍDA COM SUCESSO!   \033[1;37m"
+msg -bar
+sleep 3
+clear
 fi
 }
+
 install_start
 IP=$(wget -qO- ipv4.icanhazip.com)
 echo "America/Sao_Paulo" > /etc/timezone > /dev/null 2>&1
 ln -fs /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime > /dev/null 2>&1
 dpkg-reconfigure --frontend noninteractive tzdata > /dev/null 2>&1
 clear
-echo -e "\E[44;1;37m    INSTALANDO PAINEL WEB    \E[0m"
+echo -e "\E[44;1;37m    INSTALANDO BOT WHATSAPP    \E[0m"
 echo ""
-echo -e figlet "PLAY CONECT" | lolcat
+echo -e "PLAY CONECT" | figlet
 echo -e "                              \033[1;31mBy @play_conect\033[1;36m"
 echo ""
 chave=$(curl -sSL "https://github.com/playconect/Painel4g-2022/raw/main/pweb/chave") &>/dev/null
