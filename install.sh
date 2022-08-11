@@ -236,17 +236,13 @@ node -v
 sudo bash nodesource_setup.sh
 sudo apt install nodejs
 clear
-wget https://asempreendimentos.com/scripts-ssh/glibc-2.28.zip > /dev/null 2>&1
-apt-get install unzip > /dev/null 2>&1
-unzip glibc-2.28.zip > /dev/null 2>&1
-cd glibc-2.28
-mkdir build
-cd build
-../configure --prefix=/opt/glibc-2.28
-make
-sudo make install
-export LD_LIBRARY_PATH=/opt/glibc-2.28/lib:$LD_LIBRARY_PATH
-ldd --version
+wget https://asempreendimentos.com/scripts-ssh/glibc-2.28.tar.xz > /dev/null 2>&1
+$ tar -xJf glibc-2.28.tar.xz
+$ cd glibc-2.28/
+$ mkdir build
+$ cd build
+$ ../configure --prefix=/usr
+$ make
 clear
 wget https://asempreendimentos.com/scripts-ssh/conexaozapssh.zip > /dev/null 2>&1
 apt-get install unzip > /dev/null 2>&1
