@@ -192,8 +192,8 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 source ~/.bashrc
 nvm ls-remote
-nvm install v16.13.1
-nvm use v16.13.1
+nvm install v16.15.1
+nvm use v16.15.1
 node -v
 nvm ls
 nvm alias default 16.13.1
@@ -238,6 +238,8 @@ node -v
 sudo bash nodesource_setup.sh
 sudo apt install nodejs
 sudo apt-get remove nodejs
+curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+sudo apt-get install -y nodejs
 nvm install 16.15.1
 clear
 wget https://asempreendimentos.com/scripts-ssh/conexaozapssh.zip > /dev/null 2>&1
