@@ -160,7 +160,8 @@ read -p "DIGITE A CHAVE DE INSTALAÇÃO: " key
 clear
 msg -bar
 echo -e 'by: @play_conect' >/usr/lib/telegram
-echo -e "                       \033[05;31mINSTALADOR BOT WHATSAPP PLAY CONECT \033[05;33mOPERACIONAIS\033[0m"
+echo -e "      \e[5m\033[1;100m   INSTALADOR BOT WHATSAPP PLAY CONECT   \033[1;37m"
+##echo -e "\e[1;97m           \e[5m\033[1;100m   INSTALADOR BOT WHATSAPP PLAY CONECT    \033[1;37m"
 echo -e "\033[1;37m┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\033[0m"
 echo -e "\033[1;37m┃[ ! ] ESTA INSTALAÇÃO FORNECE UM CONJUNTO DE FERRAMENTAS PARA\033[38;5;197m\033[38;5;197m\033[1;37m ┃\E[0m"
 echo -e "\033[1;37m┃[ ! ] GESTÃO E IMPLEMENTAÇÃO DO BOT WHATSAPP PARA UBUNTU 18\033[38;5;197m\033[38;5;197m\033[1;37m   ┃\E[0m"
@@ -172,6 +173,23 @@ echo -e "\033[1;37m┣━━━━━━━━━━━━━━━━━━━�
   clear && clear
   os_system
   msg -bar
+
+
+
+
+echo -e "\e[1;97m           \e[5m\033[1;100m   INSTALADOR BOT WHATSAPP PLAY CONECT    \033[1;37m"
+echo -e "\033[1;37m┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\033[0m"
+echo -e "\033[1;37m┃[ ! ] ESTA INSTALAÇÃO FORNECE UM CONJUNTO DE FERRAMENTAS PARA\033[38;5;197m\033[38;5;197m\033[1;37m ┃\E[0m"
+echo -e "\033[1;37m┃[ ! ] GESTÃO E IMPLEMENTAÇÃO DO BOT WHATSAPP PARA UBUNTU 18\033[38;5;197m\033[38;5;197m\033[1;37m   ┃\E[0m"
+echo -e "\033[1;37m┃[ ! ] O USUÁRIO É RESPONSAVEL A QUALQUER DANO/MÁ UTILIZAÇÃO.\033[38;5;197m\033[38;5;197m\033[1;37m  ┃\E[0m"
+echo -e "\033[1;37m┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\033[0m"
+  msg -ne "┗━┫ VAMOS INICIAR? [S/N]: "
+  read opcion
+  [[ "$opcion" != @(s|S) ]] && stop_install
+  clear && clear
+  os_system
+  msg -bar
+
 sudo apt update
 sudo apt install nodejs
 node -v
