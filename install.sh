@@ -123,6 +123,7 @@ function dependencias {
     fi
   done
 }
+##echo -e "\e[1;97m           \e[5m\033[1;100m   INSTALADOR BOT WHATSAPP PLAY CONECT    \033[1;37m"
 apt-get install lolcat -y &>/dev/null
 apt install figlet -y &>/dev/null
 apt install curl -y
@@ -162,8 +163,8 @@ read -p "DIGITE A CHAVE DE INSTALAÇÃO: " key
 clear
 msg -bar
 echo -e 'by: @play_conect' >/usr/lib/telegram
-echo -e "      \e[5m\033[1;100m   INSTALADOR BOT WHATSAPP PLAY CONECT   \033[1;37m"
-##echo -e "\e[1;97m           \e[5m\033[1;100m   INSTALADOR BOT WHATSAPP PLAY CONECT    \033[1;37m"
+echo -e "\E[44;1;37m    INSTALADOR BOT WHATSAPP PLAY CONECT    \E[0m"
+echo -e ""
 echo -e "\033[1;37m┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\033[0m"
 echo -e "\033[1;37m┃[ ! ] ESTA INSTALAÇÃO FORNECE UM CONJUNTO DE FERRAMENTAS PARA\033[38;5;197m\033[38;5;197m\033[1;37m ┃\E[0m"
 echo -e "\033[1;37m┃[ ! ] GESTÃO E IMPLEMENTAÇÃO DO BOT WHATSAPP PARA UBUNTU 18\033[38;5;197m\033[38;5;197m\033[1;37m   ┃\E[0m"
