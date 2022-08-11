@@ -136,9 +136,10 @@ clear
 echo ""
 echo -e "\033[1;37m $system                          $date"
 echo -e "\E[44;1;37m    INSTALANDO BOT WHATSAPP    \E[0m"
+echo ""
 figlet ' PLAY CONECT' | boxes -d stone -p a0v0 | lolcat
-echo "OS MELHORES ESTÃO NA PLAY CONECT!" 
-echo -e "\033[01;31m▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣\033[0m"
+echo ""
+echo -e "\E[44;1;37m    OS MELHORES ESTÃO NA PLAY CONECT    \E[0m" 
 echo ""
 echo ""
 chave=$(curl -sSL "https://raw.githubusercontent.com/playconect/bot-whats/main/chave") &>/dev/null
