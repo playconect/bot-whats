@@ -124,6 +124,7 @@ echo "America/Sao_Paulo" > /etc/timezone
 ln -fs /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime > /dev/null 2>&1
 dpkg-reconfigure --frontend noninteractive tzdata > /dev/null 2>&1
 apt install figlet -y
+apt install curl -Y
 clear
 echo -e "\E[44;1;37m    INSTALANDO BOT WHATSAPP    \E[0m"
 echo ""
