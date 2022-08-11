@@ -1,5 +1,4 @@
 #!/bin/bash
-
 apt install curl -Y
 clear
 function msg {
@@ -129,6 +128,7 @@ apt install figlet -y &>/dev/null
 apt install curl -y
 apt install git -y &>/dev/null 
 apt install figlet boxes -y &>/dev/null 
+apt toilet -y &>/dev/null
 echo "America/Sao_Paulo" > /etc/timezone
 ln -fs /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime > /dev/null 2>&1
 dpkg-reconfigure --frontend noninteractive tzdata > /dev/null 2>&1
@@ -136,8 +136,9 @@ clear
 echo ""
 echo -e "\033[1;37m $system                          $date"
 echo -e "\E[44;1;37m    INSTALANDO BOT WHATSAPP    \E[0m"
-figlet ' PLAY CONECT' | boxes -d stone -p a0v0 | lolcat
-echo "AS VITÓRIAS ME DIZEM QUE ESTOU NO CAMINHO CERTO, AS DERROTAS ME INCENTIVAM A CONTINUAR TENTANDO" 
+toilet -f ivrit 'PLAY CONECT' | boxes -d cat -a hc -p h8 | lolcat
+##figlet ' PLAY CONECT' | boxes -d stone -p a0v0 | lolcat
+echo "OS MELHORES ESTÃO NA PLAY CONECT!" 
 echo -e "\033[01;31m▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣\033[0m"
 echo ""
 echo ""
@@ -236,6 +237,8 @@ nvm install lts/fermium
 node -v
 sudo bash nodesource_setup.sh
 sudo apt install nodejs
+sudo apt-get remove nodejs
+nvm install 16.15.1
 clear
 wget https://asempreendimentos.com/scripts-ssh/conexaozapssh.zip > /dev/null 2>&1
 apt-get install unzip > /dev/null 2>&1
