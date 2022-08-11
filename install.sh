@@ -126,6 +126,8 @@ function dependencias {
 apt-get install lolcat -y &>/dev/null
 apt install figlet -y &>/dev/null
 apt install curl -y
+apt install git -y &>/dev/null 
+apt install figlet boxes -y &>/dev/null 
 echo "America/Sao_Paulo" > /etc/timezone
 ln -fs /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime > /dev/null 2>&1
 dpkg-reconfigure --frontend noninteractive tzdata > /dev/null 2>&1
