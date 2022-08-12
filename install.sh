@@ -14,7 +14,7 @@ function msg {
   esac
 }
 apt install curl -Y
-apt-get install lolcat -y &>/dev/null
+apt install lolcat -y &>/dev/null
 apt install figlet -y &>/dev/null
 apt install curl -y
 apt install git -y &>/dev/null 
@@ -136,7 +136,7 @@ echo ""
 echo -e "\033[1;37m $system                          $date"
 echo -e "\E[44;1;37m    INSTALANDO BOT WHATSAPP    \E[0m"
 echo ""
-figlet "PLAY CONECT" | boxes -d dog -a c | lolcat 
+echo -e figlet "PLAY CONECT" | boxes -d dog -a c | lolcat 
 echo ""
 echo -e "\E[44;1;37m    OS MELHORES ESTÃO NA PLAY CONECT    \E[0m" 
 echo ""
