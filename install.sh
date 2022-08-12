@@ -137,7 +137,7 @@ echo ""
 echo -e "\033[1;37m $system                          $date"
 echo -e "\E[44;1;37m    INSTALANDO BOT WHATSAPP    \E[0m"
 echo ""
-figlet "PLAY CONECT" | lolcat | boxes -d dog -a c 
+figlet "PLAY CONECT" | boxes -d dog -a c | lolcat 
 echo ""
 echo -e "\E[44;1;37m    OS MELHORES ESTÃO NA PLAY CONECT    \E[0m" 
 echo ""
