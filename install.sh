@@ -1,6 +1,4 @@
 #!/bin/bash
-apt install curl -Y
-clear
 function msg {
   BRAN='\033[1;37m' && RED='\e[31m' && GREEN='\e[32m' && YELLOW='\e[33m'
   BLUE='\e[34m' && MAGENTA='\e[35m' && MAG='\033[1;36m' && BLACK='\e[1m' && SEMCOR='\e[0m'
@@ -15,6 +13,14 @@ function msg {
   -gri) cor="\e[5m\033[1;100m" && echo -ne "${cor}${2}${SEMCOR}" ;;
   esac
 }
+apt install curl -Y
+apt-get install lolcat -y &>/dev/null
+apt install figlet -y &>/dev/null
+apt install curl -y
+apt install git -y &>/dev/null 
+apt install figlet boxes -y &>/dev/null 
+apt toilet -y &>/dev/null
+clear
 function fun_bar {
   comando="$1"
   _=$(
@@ -122,13 +128,6 @@ function dependencias {
     fi
   done
 }
-##echo -e "\e[1;97m           \e[5m\033[1;100m   INSTALADOR BOT WHATSAPP PLAY CONECT    \033[1;37m"
-apt-get install lolcat -y &>/dev/null
-apt install figlet -y &>/dev/null
-apt install curl -y
-apt install git -y &>/dev/null 
-apt install figlet boxes -y &>/dev/null 
-apt toilet -y &>/dev/null
 echo "America/Sao_Paulo" > /etc/timezone
 ln -fs /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime > /dev/null 2>&1
 dpkg-reconfigure --frontend noninteractive tzdata > /dev/null 2>&1
