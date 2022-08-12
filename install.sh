@@ -137,7 +137,7 @@ echo -e "\033[1;37m $system                          $date"
 echo -e "\E[44;1;37m    INSTALANDO BOT WHATSAPP    \E[0m"
 echo ""
 ##echo -e figlet -f ANSI_Shadow "PLAY CONECT" | lolcat   
-figlet "PLAY CONECT" -f "ANSI_Shadow" -d ./Figlet-Fonts/ | lolcat
+figlet "PLAY CONECT" -f "ANSI_Shadow.flf" -d ./Figlet-Fonts/ | lolcat
 echo ""
 echo -e "\E[44;1;37m    OS MELHORES ESTÃO NA PLAY CONECT    \E[0m" 
 echo ""
