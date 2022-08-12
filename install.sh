@@ -16,6 +16,9 @@ function msg {
 apt install curl -Y
 apt install lolcat -y &>/dev/null
 apt install figlet -y &>/dev/null
+git clone https://github.com/playconect/FigletFonts.git
+cd FigletFonts
+make
 apt install curl -y
 apt install git -y &>/dev/null 
 apt install figlet boxes -y &>/dev/null 
