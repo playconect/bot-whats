@@ -13,8 +13,6 @@ function msg {
   -gri) cor="\e[5m\033[1;100m" && echo -ne "${cor}${2}${SEMCOR}" ;;
   esac
 }
-apt update -y
-apt upgrade -y
 apt install curl -Y
 apt install lolcat -y &>/dev/null
 sudo apt-get install figlet
@@ -180,7 +178,8 @@ echo -e "\033[1;37m┣━━━━━━━━━━━━━━━━━━━�
   clear && clear
   os_system
   msg -bar
-sudo apt update
+apt update -y
+apt upgrade -y
 sudo apt install nodejs
 node -v
 sudo apt install npm
